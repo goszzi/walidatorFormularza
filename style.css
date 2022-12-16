@@ -1,0 +1,123 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'League Spartan', sans-serif;
+	background: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+		linear-gradient(225deg, black 25%, transparent 25%) -50px 0, linear-gradient(315deg, black 25%, transparent 25%),
+		linear-gradient(45deg, black 25%, transparent 25%);
+	background-size: 2em 2em;
+	background-color: #232323;
+}
+
+.wrapper {
+	width: 440px;
+	background-color: #fff;
+	box-shadow: 0 0 10px #000;
+}
+
+form {
+	padding: 40px;
+	font-size: 20px;
+}
+
+h1 {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.form-box {
+	margin-bottom: 15px;
+}
+
+.form-box label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-box input {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid rgb(197, 197, 197);
+	border-radius: 5px;
+}
+
+.form-box.error input {
+	border: 1px solid rgb(206, 39, 47);
+	background-color: rgba(206, 39, 47, 0.1);
+}
+
+.form-box .error-text {
+	margin: 5px 0 0 10px;
+	font-size: 14px;
+	color: rgb(206, 39, 47);
+	visibility: hidden;
+}
+
+.form-box.error .error-text {
+	visibility: visible;
+}
+
+.control-buttons {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.send,
+.clear,
+.close {
+	display: block;
+	padding: 10px 0;
+	margin-left: 10px;
+	width: 100px;
+	background-color: rgb(142, 138, 139);
+	color: #fff;
+    font-size: 18px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.send:hover,
+.clear:hover,
+.close:hover {
+	background-color: rgb(88, 88, 88);
+}
+
+.popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: -300px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: 200px;
+	background-color: #fff;
+	border-radius: 8px;
+	border: 2px solid black;
+	transition: top 0.5s;
+}
+
+.popup p {
+	font-size: 28px;
+}
+
+.popup button {
+	margin-top: 20px;
+}
+
+.show-popup {
+	top: 150px;
+}
